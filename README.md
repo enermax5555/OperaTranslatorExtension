@@ -1,54 +1,87 @@
-# HTML Translator Application
+# Opera Translator Extension
 
-This is a simple HTML-based translator application that allows users to input text and receive translations in different languages.
+A simple, fast, and privacy-friendly translation extension for Opera (and Chromium-based browsers).  
+Supports dozens of languages, dark mode, and works offline with your last translation.
+
+---
+
+## Features
+
+- 🌍 Translate text between 60+ languages
+- 🔎 Fast language search and selection
+- 🌓 Light/Dark mode toggle
+- 💾 Remembers your last input, output, and language
+- ⚡ Clean, modular codebase (ES modules)
+- 🛡️ No tracking, no ads, no unnecessary permissions
+
+---
+
+## How It Works
+
+- Uses the [Lingva Translate API](https://lingva.ml/) for translations
+- Language list and dropdown are fully searchable
+- All settings and last-used data are stored locally (via Chrome storage)
+- Modern, responsive UI
+
+---
+
+## Installation
+
+1. **Clone or download this repo:**
+   ```sh
+   git clone https://github.com/enermax5555/OperaTranslatorExtension.git
+   cd OperaTranslatorExtension
+   ```
+
+2. **Load as an unpacked extension:**
+   - Go to `opera://extensions` (or `chrome://extensions`)
+   - Enable "Developer mode"
+   - Click "Load unpacked" and select the project folder
+
+---
+
+## Usage
+
+- Type or paste text in the input box.
+- Select your target language using the dropdown (searchable).
+- Click **Translate** to see the result.
+- Use the **Clear** button to reset.
+- Toggle **Dark Mode** for a comfortable night experience.
+
+---
 
 ## Project Structure
 
 ```
-html-translator-app
-├── src
-│   ├── index.html        # Main HTML document for the translator application
-│   ├── styles
-│   │   └── style.css     # Styles for the application
-│   └── scripts
-│       └── app.js        # JavaScript code for handling translations
-├── package.json          # npm configuration file
-└── README.md             # Documentation for the project
+src/
+  scripts/
+    app.js           # Main app logic and UI glue
+    languages.js     # Language list and helpers
+    storage.js       # Chrome storage helpers
+    dropdown.js      # Dropdown rendering logic
+    translate.js     # Translation API logic
+style.css           # Main stylesheet
+html/
+  index.html        # Extension popup HTML
 ```
 
-## Getting Started
+---
 
-To get a local copy up and running, follow these simple steps:
+## Tech Stack
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/html-translator-app.git
-   ```
+- JavaScript (ES Modules)
+- HTML5 & CSS3
+- Lingva Translate API
+- Chrome Storage API
 
-2. **Navigate to the project directory**
-   ```bash
-   cd html-translator-app
-   ```
-
-3. **Install dependencies**
-   If you have any dependencies listed in `package.json`, run:
-   ```bash
-   npm install
-   ```
-
-4. **Open the application**
-   Open `src/index.html` in your web browser to view the application.
-
-## Usage
-
-- Enter the text you want to translate in the input field.
-- Select the target language from the dropdown menu.
-- Click the "Translate" button to see the translated text.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a pull request or open an issue.
+---
 
 ## License
 
-This project is licensed under the MIT License.
+MIT
+
+---
+
+## Credits
+
+- [Lingva Translate](https://lingva.ml/)
