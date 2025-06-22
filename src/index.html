@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Translator</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <button id="themeToggleBtn" class="theme-toggle-btn">Dark Mode</button>
+    <h1>Translator</h1>
+    <textarea id="inputText" class="input-editable" contenteditable="true" spellcheck="true" placeholder="Enter text to translate"></textarea>
+    <div class="select-row">
+        <div class="custom-select-wrapper">
+            <input type="text" id="langSearch" placeholder="Search language..." autocomplete="off" style="display:none;">
+            <div id="selectedLangBtn" class="selected-lang-btn">Select language</div>
+            <div id="customSelect" class="custom-select"></div>
+        </div>
+        <button id="clearBtn" class="clear-btn">Clear</button>
+    </div>
+    <button id="translateBtn">Translate</button>
+    <div id="outputText" class="output-editable"></div>
+    
+    <script type="module" src="scripts/app.js"></script>
+</body>
+</html>

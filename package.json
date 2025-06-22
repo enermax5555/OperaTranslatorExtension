@@ -1,0 +1,20 @@
+{
+  "name": "html-translator-app",
+  "version": "1.0.0",
+  "description": "A simple HTML-based translator application.",
+  "main": "src/scripts/app.js",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build step not defined'"
+  },
+  "keywords": [
+    "translator",
+    "html",
+    "javascript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
